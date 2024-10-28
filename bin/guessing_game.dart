@@ -56,6 +56,7 @@ void main() {
             continue;
         }
 
+
         if (!isNumeric(userGuessInput)) {
             stdout.write("Input is not a number! Try again: ");
             userGuessInput = stdin.readLineSync(encoding: utf8);
