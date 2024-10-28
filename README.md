@@ -8,6 +8,7 @@ have features that i like
 - null safety
 - doesn't force you into 1 paradigm and or build around mainly 1 paradigm
 - compile to machine code or JIT compiled
+- fast to write and compile
 
 
 stuff that i don't like
