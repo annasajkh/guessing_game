@@ -9,7 +9,7 @@ bool isNumeric(String string) {
 String validateConfirmationInput() {
     String userInput = stdin.readLineSync(encoding: utf8) ?? "";
     
-    while (userInput != "y" || userInput != "n") {
+    while (userInput != "y" && userInput != "n") {
         stdout.write("Wrong Input! wanna play again? (y/n) ");
         userInput = stdin.readLineSync(encoding: utf8) ?? "";
     }
@@ -19,7 +19,7 @@ String validateConfirmationInput() {
 
 void reset() {
     secretNumber = random.nextInt(10) + 1;
-    attempts = 4;
+    attempts = 5;
 }
 
 Random random = Random();
