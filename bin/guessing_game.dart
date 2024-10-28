@@ -7,17 +7,11 @@ bool isNumeric(String string) {
 }
 
 String validateConfirmationInput() {
-    String? userInput = stdin.readLineSync(encoding: utf8);
+    String userInput = stdin.readLineSync(encoding: utf8) ?? "";
     
-    while (true) {
-        if (userInput != null) {
-            if (userInput == "y" || userInput == "n") {
-                break;
-            }
-        }
-
+    while (userInput != "y" || userInput != "n") {
         stdout.write("Wrong Input! wanna play again? (y/n) ");
-        userInput = stdin.readLineSync(encoding: utf8);
+        userInput = stdin.readLineSync(encoding: utf8) ?? "";
     }
 
     return userInput;
@@ -33,11 +27,11 @@ int secretNumber = random.nextInt(10) + 1;
 int attempts = 4;
 
 void main() {
-    String? userGuessInput;
+    String userGuessInput;
     
     while (true) {
         stdout.write("Guess the number between 1 - 10, You have $attempts attempts: ");
-        userGuessInput = stdin.readLineSync(encoding: utf8);
+        userGuessInput = stdin.readLineSync(encoding: utf8) ?? "";
 
 
         if (attempts == 0) {
@@ -51,16 +45,10 @@ void main() {
             reset();
             continue;
         }
-        
-        if (userGuessInput == null) {
-            continue;
-        }
 
-
-        if (!isNumeric(userGuessInput)) {
+        while (!isNumeric(userGuessInput)) {
             stdout.write("Input is not a number! Try again: ");
-            userGuessInput = stdin.readLineSync(encoding: utf8);
-            continue;
+            userGuessInput = stdin.readLineSync(encoding: utf8) ?? "";
         }
 
         int guess = int.parse(userGuessInput); 
