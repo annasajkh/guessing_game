@@ -7,7 +7,7 @@ have features that i like
 - static typing
 - null safety
 - doesn't force you into 1 paradigm and or build around mainly 1 paradigm
-- compile to machine code or JIT compiled
+- compiled to machine code or JIT compiled
 - fast to write and compile
 
 
