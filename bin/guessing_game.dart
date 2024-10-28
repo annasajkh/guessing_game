@@ -24,7 +24,7 @@ void reset() {
 
 Random random = Random();
 int secretNumber = random.nextInt(10) + 1;
-int attempts = 4;
+int attempts = 5;
 
 void main() {
     String userGuessInput;
